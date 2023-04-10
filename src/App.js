@@ -1,23 +1,27 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import Menu from './components/Menu';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
+
+  const contacts = {
+    phone: "+49 123 456 78 90",
+    address: "Corrensstr. 80",
+    address2: "48149 Münster"
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Hero title="Willkommen beim Kebab King" subtitle="Entdecken Sie den besten Döner in Münster!" />
+      <Menu />
+      <Contact phone={contacts.phone} address={contacts.address} address2={contacts.address2} />
+      <Footer phone={contacts.phone} address={contacts.address} address2={contacts.address2} />
     </div>
   );
 }
