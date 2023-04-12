@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/kebab-king/static/css/main.073c9b0a.css",
+    "main.js": "/kebab-king/static/js/main.0502bf57.js",
+    "static/js/787.c9cc2c90.chunk.js": "/kebab-king/static/js/787.c9cc2c90.chunk.js",
+    "static/media/pizza.png": "/kebab-king/static/media/pizza.9f4f5e8578dc0c7c132d.png",
+    "static/media/lahmacun.png": "/kebab-king/static/media/lahmacun.08dc522df0e4d6819183.png",
+    "static/media/doner2.png": "/kebab-king/static/media/doner2.5f1b9486f8932389fd36.png",
+    "static/media/pizzaBR.png": "/kebab-king/static/media/pizzaBR.6a83669640a9bb94934d.png",
+    "static/media/drinks.png": "/kebab-king/static/media/drinks.5633667341506d269711.png",
+    "static/media/doner.png": "/kebab-king/static/media/doner.4ae5bfe058d7036f6e92.png",
+    "static/media/imbiss.png": "/kebab-king/static/media/imbiss.f30c346470d34375997d.png",
+    "static/media/falafel.png": "/kebab-king/static/media/falafel.091a7e831e26f83a2c03.png",
+    "static/media/pommes.png": "/kebab-king/static/media/pommes.5e8da4728f9d3d486a22.png",
+    "static/media/burger.png": "/kebab-king/static/media/burger.a32663a6cfe08e99a170.png",
+    "static/media/sauces.png": "/kebab-king/static/media/sauces.df557728a3848280bf25.png",
+    "static/media/schnitzel.png": "/kebab-king/static/media/schnitzel.462d4ab04636ec5dda6f.png",
+    "static/media/salad.png": "/kebab-king/static/media/salad.b3aefd598246d7188b09.png",
+    "static/media/logo.svg": "/kebab-king/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/kebab-king/index.html",
+    "main.073c9b0a.css.map": "/kebab-king/static/css/main.073c9b0a.css.map",
+    "main.0502bf57.js.map": "/kebab-king/static/js/main.0502bf57.js.map",
+    "787.c9cc2c90.chunk.js.map": "/kebab-king/static/js/787.c9cc2c90.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.0502bf57.js"
+  ]
+}

@@ -1,0 +1,246 @@
+.bordered {
+  border: 1px dotted white; }
+
+a.logo {
+  color: white; }
+  a.logo:hover {
+    color: white; }
+
+nav {
+  background-color: black;
+  color: #f5f5f5; }
+  nav ul li:hover {
+    background-color: #333; }
+  nav ul li a {
+    color: #f5f5f5; }
+
+section#hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/bg_1.jpg");
+  color: #f5f5f5; }
+  section#hero .container .hero-content .cta-buttons .cta-primary {
+    background-color: #fac564;
+    color: black; }
+    section#hero .container .hero-content .cta-buttons .cta-primary:hover {
+      background-color: #fac564; }
+  section#hero .container .hero-content .cta-buttons .cta-secondary {
+    background-color: transparent;
+    color: #f5f5f5; }
+    section#hero .container .hero-content .cta-buttons .cta-secondary:hover {
+      background-color: #f5f5f5;
+      color: black; }
+
+section#menu {
+  background-color: black;
+  color: #f5f5f5; }
+  section#menu .container ul li a {
+    color: #f5f5f5; }
+  section#menu .menu-tabs {
+    background-color: black; }
+    section#menu .menu-tabs li .active {
+      background-color: #fac564; }
+  section#menu .menu-tab {
+    background-color: transparent;
+    color: #f5f5f5; }
+
+section#contact {
+  background-color: #fac564; }
+
+footer {
+  background-color: black;
+  color: #f5f5f5; }
+
+.menu .menu-tab .menu-table table p {
+  color: grey; }
+
+html {
+  scroll-behavior: smooth; }
+
+button:hover,
+a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s; }
+
+a.logo {
+  text-decoration: none; }
+
+.container {
+  width: 1368px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+nav {
+  height: 10vh; }
+  nav ul li {
+    display: inline-block;
+    padding: 10px;
+    height: 100%;
+    font-size: 18px; }
+    nav ul li:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+      cursor: pointer; }
+    nav ul li a {
+      text-decoration: none; }
+
+section#hero {
+  background-size: cover;
+  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/bg_1.jpg");
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  section#hero .container {
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap; }
+    @media screen and (max-width: 1069px) {
+      section#hero .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
+    section#hero .container .hero-content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex: 1; }
+      section#hero .container .hero-content h1 {
+        font-size: 2.5rem;
+        margin: 0; }
+      section#hero .container .hero-content h2 {
+        font-size: 1.5rem;
+        margin: 0; }
+      section#hero .container .hero-content .cta-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; }
+        section#hero .container .hero-content .cta-buttons .cta-primary {
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 1.2rem;
+          border: none; }
+          section#hero .container .hero-content .cta-buttons .cta-primary:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+            cursor: pointer; }
+        section#hero .container .hero-content .cta-buttons .cta-secondary {
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: 1.2rem;
+          border: 1px solid #f5f5f5;
+          margin-left: 10px; }
+          section#hero .container .hero-content .cta-buttons .cta-secondary:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+            cursor: pointer; }
+    section#hero .container .hero-image {
+      flex: 1; }
+      section#hero .container .hero-image img {
+        width: 100%;
+        height: 100%; }
+
+section#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 32px; }
+  section#menu .container {
+    flex-direction: column;
+    justify-content: center; }
+    section#menu .container ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      section#menu .container ul li {
+        display: inline-block;
+        padding: 10px;
+        height: 100%;
+        font-size: 18px; }
+        section#menu .container ul li:hover {
+          transform: scale(1.1);
+          transition: 0.3s;
+          cursor: pointer; }
+        section#menu .container ul li a {
+          text-decoration: none; }
+  section#menu .menu-tabs {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 10px;
+    margin: 32px 0; }
+    section#menu .menu-tabs li {
+      margin: 0 4px;
+      padding: 0; }
+  section#menu .menu-tab {
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 0; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; }
+  footer .col {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    flex: 1; }
+    footer .col ul {
+      margin: 16px 0;
+      text-align: left; }
+      footer .col ul li {
+        display: block; }
+
+.menu {
+  width: 100%; }
+  .menu .menu-tab {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; }
+    .menu .menu-tab .menu-table {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 32px; }
+      .menu .menu-tab .menu-table table {
+        width: 100%;
+        margin: 16px 0; }
+        .menu .menu-tab .menu-table table tr td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #f5f5f5 !important; }
+          .menu .menu-tab .menu-table table tr td h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem; }
+          .menu .menu-tab .menu-table table tr td p {
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0; }
+    .menu .menu-tab .menu-img {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .menu .menu-tab .menu-img img {
+        width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
