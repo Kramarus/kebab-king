@@ -11,10 +11,10 @@ export default function MenuTab(props) {
       <h2 style={style}>{props.title}</h2>
 
       <div className="menu-tab">
-        <div className="menu-img">
+        <div className="menu-img bordered">
           <img src={props.image} alt="" />
         </div>
-        <div className="menu-table">
+        <div className="menu-table bordered">
           <table>{props.table}</table>
         </div>
       </div>

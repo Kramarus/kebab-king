@@ -1,0 +1,21 @@
+@mixin screen-max($max) {
+    @media (max-width: $max) {
+        @content
+    }
+}
+
+@mixin screen-max-min($max, $min) {
+    @media (max-width: $max) and (min-width: $min) {
+        @content
+    }
+}
+
+@include screen-max (540px) {
+}
+
+@mixin one-line-text {
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}

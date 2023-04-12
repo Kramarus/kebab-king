@@ -7,6 +7,8 @@ import Menu from './components/Menu';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+import "./css/style.css";
+
 function App() {
 
   const contacts = {

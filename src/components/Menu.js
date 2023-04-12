@@ -80,7 +80,7 @@ export default function Menu(props) {
 
   return (
     <section id="menu">
-      <div className="container">
+      <div className="container bordered">
         <ul class="menu-tabs bordered">
           {groups}
         </ul>
