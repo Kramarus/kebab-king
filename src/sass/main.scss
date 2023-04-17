@@ -13,6 +13,7 @@ html {
     background-color: $custom-dark;
     color: $custom-light;
     width: 100%;
+    overflow-x: hidden;
     .container {
       width: 1368px;
       height: 100%;
