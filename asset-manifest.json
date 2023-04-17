@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kebab-king/static/css/main.7b02b791.css",
-    "main.js": "/kebab-king/static/js/main.b137ea81.js",
+    "main.css": "/kebab-king/static/css/main.e2b04ba4.css",
+    "main.js": "/kebab-king/static/js/main.5a2e210d.js",
     "static/js/787.c9cc2c90.chunk.js": "/kebab-king/static/js/787.c9cc2c90.chunk.js",
     "static/media/sauces.png": "/kebab-king/static/media/sauces.df557728a3848280bf25.png",
     "static/media/schnitzel.png": "/kebab-king/static/media/schnitzel.462d4ab04636ec5dda6f.png",
@@ -18,12 +18,12 @@
     "static/media/burger.png": "/kebab-king/static/media/burger.cd758fead86ddaa2f7d1.png",
     "static/media/logo.svg": "/kebab-king/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/kebab-king/index.html",
-    "main.7b02b791.css.map": "/kebab-king/static/css/main.7b02b791.css.map",
-    "main.b137ea81.js.map": "/kebab-king/static/js/main.b137ea81.js.map",
+    "main.e2b04ba4.css.map": "/kebab-king/static/css/main.e2b04ba4.css.map",
+    "main.5a2e210d.js.map": "/kebab-king/static/js/main.5a2e210d.js.map",
     "787.c9cc2c90.chunk.js.map": "/kebab-king/static/js/787.c9cc2c90.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b02b791.css",
-    "static/js/main.b137ea81.js"
+    "static/css/main.e2b04ba4.css",
+    "static/js/main.5a2e210d.js"
   ]
 }
