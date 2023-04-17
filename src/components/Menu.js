@@ -80,8 +80,8 @@ export default function Menu(props) {
 
   return (
     <section id="menu">
-      <div className="container bordered">
-        <ul class="menu-tabs bordered">
+      <div className="container">
+        <ul class="menu-tabs">
           {groups}
         </ul>
         <MenuTab id="Döner" title="Döner" table={donerMenu} image={donerImg} />

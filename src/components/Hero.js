@@ -4,8 +4,8 @@ import burger from "../images/burger.png";
 export default function Hero(props) {
   return (
     <section id="hero">
-      <div className="container bordered">
-        <div className="hero bordered2">
+      <div className="container">
+        <div className="hero">
           <div className="hero-content ">
             <h1><snap>{props.title1}</snap> <snap>{props.title2}</snap></h1>
             <h2>{props.subtitle}</h2>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 
 import donerMenu from "../menu/doner.js";
+import donerImg from "../images/doner2.png";
 
 export default function Doner() {
   return (
