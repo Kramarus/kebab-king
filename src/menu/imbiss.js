@@ -53,22 +53,22 @@ let imbissList = [
   {
     id: "31A",
     category: "Imbiss",
-    name: "Chicken Nuggets (6 Stück)",
-    comment: null,
+    name: "Chicken Nuggets",
+    comment: '(6 Stück)',
     price: 4.5,
   },
   {
     id: "31B",
     category: "Imbiss",
-    name: "Chicken Nuggets (9 Stück)",
-    comment: null,
+    name: "Chicken Nuggets",
+    comment: "(9 Stück)",
     price: 7,
   },
   {
     id: "31C",
     category: "Imbiss",
-    name: "Chicken Nuggets (12 Stück)",
-    comment: null,
+    name: "Chicken Nuggets",
+    comment: "(12 Stück)",
     price: 9,
   },
 ];

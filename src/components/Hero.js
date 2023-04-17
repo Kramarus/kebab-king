@@ -10,7 +10,7 @@ export default function Hero(props) {
             <h1><snap>{props.title1}</snap> <snap>{props.title2}</snap></h1>
             <h2>{props.subtitle}</h2>
             <div className="cta-buttons">
-              <button className="cta-primary">Jetzt bestellen</button>
+              <button className="cta-primary"><a href="https://wa.me/4915906746754?text=Hallo!">Jetzt bestellen</a></button>
                 <button className="cta-secondary"><a href="#menu">Menü ansehen</a></button>
             </div>
           </div>

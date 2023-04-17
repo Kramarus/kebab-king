@@ -4,6 +4,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Menu from './components/Menu';
+import Wochenmenu from './components/Wochenmenu';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ function App() {
       <Nav />
       <Hero title1="Willkommen" title2="beim Kebab King" subtitle="Entdecken Sie den besten Döner in Münster!" />
       <Menu />
+      <Wochenmenu />
       <Contact phone={contacts.phone} address={contacts.address} address2={contacts.address2} />
       <Footer phone={contacts.phone} address={contacts.address} address2={contacts.address2} />
     </div>

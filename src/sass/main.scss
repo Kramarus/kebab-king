@@ -152,6 +152,9 @@ section#hero {
           background-color: $primary-color;
           color: $custom-dark;
           border: 1px solid $primary-color;
+          a {
+            color: $custom-dark;
+          }
           &:hover {
             transform: scale(1.1);
             transition: 0.3s;
@@ -200,7 +203,7 @@ section#hero {
 }
 
 // Menu
-section#menu {
+section#menu, section#wochenmenu {
   display: block;
   flex-direction: column;
   justify-content: center;
@@ -263,6 +266,40 @@ section#menu {
       }
     }
   }
+  .menu-table {
+    margin: 0;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    table {
+      width: 100%;
+      margin: 16px 0;
+      padding: 4px;
+      .menu-id {
+        text-align: center;
+      }
+      tr {
+        td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid $custom-light !important;
+          h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+          }
+          p {
+            margin: 0;
+            padding: 0;
+            font-size: 1.2rem;
+            color: grey;
+          }
+        }
+      }
+    }
+  }
   .menu {
     display: flex;
     flex-direction: row;
@@ -282,40 +319,7 @@ section#menu {
       padding: 0;
       width: 100%;
       font-size: 1rem;
-      .menu-table {
-        margin: 0;
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        table {
-          width: 100%;
-          margin: 16px 0;
-          padding: 4px;
-          .menu-id {
-            text-align: center;
-          }
-          tr {
-            td {
-              padding: 8px;
-              text-align: left;
-              border-bottom: 1px solid $custom-light !important;
-              h3 {
-                margin: 0;
-                padding: 0;
-                font-size: 1.5rem;
-              }
-              p {
-                margin: 0;
-                padding: 0;
-                font-size: 1.2rem;
-                color: grey;
-              }
-            }
-          }
-        }
-      }
+      
       .menu-img {
         flex: 1;
         display: flex;
@@ -379,6 +383,7 @@ footer {
     flex: 1;
     h2 {
       text-align: left;
+      margin: 32px 0;
     }
     ul {
       margin: 16px 0;

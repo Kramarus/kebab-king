@@ -51,7 +51,7 @@ export default function Menu(props) {
     "Salate",
     "Vegetarisch",
     "Getränke",
-    "Saucen",
+    "Sauces",
   ];
 
   const [activeTab, setActiveTab] = useState(groups[0]);
@@ -130,8 +130,8 @@ export default function Menu(props) {
           image={drinksImg}
         />
         <MenuTab
-          id="Saucen"
-          title="Saucen"
+          id="Sauces"
+          title="Sauces"
           table={saucesMenu}
           image={saucesImg}
         />
