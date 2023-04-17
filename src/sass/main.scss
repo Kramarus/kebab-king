@@ -166,7 +166,7 @@ section#menu {
   color: $custom-light;
   .menu-tabs {
     position: -webkit-sticky; /* Safari */
-    position: sticky;
+    position: sticky!important;
     top: 10px;
 
     display: flex;
@@ -196,7 +196,7 @@ section#menu {
         background-color: transparent;
         border: none;
         color: $custom-light;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         &:hover {
           cursor: pointer;
         }
