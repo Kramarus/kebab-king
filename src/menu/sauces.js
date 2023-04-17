@@ -3,16 +3,16 @@ import convertToMenu from "./convertToMenu";
 let sausecList = [
     {
         id: "57",
-        name: "Mayo | Ketchup | Curry | Joghurt | Tzatziki | Cocktail",
+        name: "Sauces",
         category: "Sauces",
-        comment: null,
+        comment: "Mayo | Ketchup | Curry | Joghurt | Tzatziki | Cocktail",
         price: 0.7,
     },
     {
         id: "58",
-        name: "Jägersauce | Paprikasauce Balkan Art | Hollandaise",
+        name: "Sauces",
         category: "Sauces",
-        comment: null,
+        comment: "Jägersauce | Paprikasauce Balkan Art | Hollandaise",
         price: 1.0,
     }
 ];

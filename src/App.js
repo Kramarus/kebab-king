@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Hero title="Willkommen beim Kebab King" subtitle="Entdecken Sie den besten Döner in Münster!" />
+      <Hero title1="Willkommen" title2="beim Kebab King" subtitle="Entdecken Sie den besten Döner in Münster!" />
       <Menu />
       <Contact phone={contacts.phone} address={contacts.address} address2={contacts.address2} />
       <Footer phone={contacts.phone} address={contacts.address} address2={contacts.address2} />

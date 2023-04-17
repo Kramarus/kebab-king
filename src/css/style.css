@@ -1,10 +1,13 @@
-.bordereda {
+.bordered {
   border: 1px dotted white; }
 
+.bordered2 {
+  border: 1px dotted red; }
+
 html {
-  scroll-behavior: smooth;
-  box-sizing: border-box; }
+  scroll-behavior: smooth; }
   html body {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Open Sans", sans-serif;
@@ -12,7 +15,7 @@ html {
     color: #f5f5f5;
     width: 100%; }
     html body .container {
-      max-width: 1368px;
+      width: 1368px;
       height: 100%;
       margin: 0 auto;
       padding: 0;
@@ -20,8 +23,7 @@ html {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      overflow: hidden; }
+      flex-wrap: wrap; }
       @media (max-width: 1186px) {
         html body .container {
           width: 100%;
@@ -43,7 +45,8 @@ html {
 nav {
   height: 10vh;
   background-color: black;
-  color: #f5f5f5; }
+  color: #f5f5f5;
+  overflow: hidden; }
   nav a {
     color: #f5f5f5; }
   nav ul li {
@@ -62,6 +65,7 @@ section#hero {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/bg_1.jpg");
   color: #f5f5f5;
   height: 90vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,7 +73,8 @@ section#hero {
   section#hero .hero {
     flex-direction: row;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    width: 100%; }
     @media (max-width: 1186px) {
       section#hero .hero {
         flex-direction: column;
@@ -84,11 +89,9 @@ section#hero {
       flex: 1; }
       section#hero .hero .hero-content h1 {
         margin: 0;
-        font-size: 2.5rem;
-        clear: both;
-        display: inline-block;
-        overflow: hidden;
-        white-space: nowrap; }
+        font-size: 2.5rem; }
+        section#hero .hero .hero-content h1 snap {
+          display: inline-block; }
       section#hero .hero .hero-content h2 {
         margin: 0;
         font-size: 1.5rem; }
@@ -98,6 +101,12 @@ section#hero {
         flex-direction: row;
         justify-content: center;
         align-items: center; }
+        @media (max-width: 400px) {
+          section#hero .hero .hero-content .cta-buttons {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%; } }
         section#hero .hero .hero-content .cta-buttons .cta-primary {
           padding: 10px 20px;
           border-radius: 5px;
@@ -110,6 +119,10 @@ section#hero {
             transition: 0.3s;
             cursor: pointer;
             background-color: #fac564; }
+          @media (max-width: 400px) {
+            section#hero .hero .hero-content .cta-buttons .cta-primary {
+              margin-bottom: 10px;
+              width: 90%; } }
         section#hero .hero .hero-content .cta-buttons .cta-secondary {
           padding: 10px 20px;
           border-radius: 5px;
@@ -124,14 +137,21 @@ section#hero {
             cursor: pointer;
             background-color: #f5f5f5;
             color: black; }
+          section#hero .hero .hero-content .cta-buttons .cta-secondary a {
+            color: #f5f5f5; }
+          @media (max-width: 400px) {
+            section#hero .hero .hero-content .cta-buttons .cta-secondary {
+              width: 90%;
+              margin-left: 0; } }
     section#hero .hero .hero-image {
-      flex: 1; }
+      flex: 1;
+      overflow: hidden; }
       section#hero .hero .hero-image img {
-        width: 100%;
-        height: 100%; }
+        max-width: 100%;
+        max-height: 100%; }
 
 section#menu {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -141,9 +161,9 @@ section#menu {
   section#menu .menu-tabs {
     position: -webkit-sticky;
     /* Safari */
-    position: sticky !important;
+    position: sticky;
     top: 10px;
-    display: flex;
+    display: block;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -152,7 +172,8 @@ section#menu {
     list-style-type: none;
     padding: 0;
     width: 100%;
-    background-color: black; }
+    background-color: black;
+    z-index: 1000; }
     section#menu .menu-tabs li {
       display: inline-block;
       padding: 8px 4px;
@@ -176,7 +197,8 @@ section#menu {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     section#menu .menu h2 {
       width: 100%;
       padding: 32px 0; }
@@ -195,7 +217,7 @@ section#menu {
         justify-content: center;
         align-items: center; }
         section#menu .menu .menu-tab .menu-table table {
-          width: 100%;
+          max-width: 100%;
           margin: 16px 0; }
           section#menu .menu .menu-tab .menu-table table tr td {
             padding: 8px;
@@ -216,13 +238,16 @@ section#menu {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
+        section#menu .menu .menu-tab .menu-img img {
+          max-width: 100%;
+          max-height: 100%; }
 
-section#menu .container .menu-tab {
+section#menu .menu-tab {
   display: flex !important;
   flex-direction: row;
   justify-content: space-between; }
   @media screen and (max-width: 1186px) {
-    section#menu .container .menu-tab {
+    section#menu .menu-tab {
       flex-direction: column; } }
 
 section#contact {

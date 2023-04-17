@@ -5,15 +5,13 @@ export default function Hero(props) {
   return (
     <section id="hero">
       <div className="container bordered">
-        <div className="hero bordered">
+        <div className="hero bordered2">
           <div className="hero-content ">
-            <h1>{props.title}</h1>
+            <h1><snap>{props.title1}</snap> <snap>{props.title2}</snap></h1>
             <h2>{props.subtitle}</h2>
             <div className="cta-buttons">
               <button className="cta-primary">Jetzt bestellen</button>
-              <a href="#menu">
-                <button className="cta-secondary">Menü ansehen</button>
-              </a>
+                <button className="cta-secondary"><a href="#menu">Menü ansehen</a></button>
             </div>
           </div>
           <div className="hero-image">
