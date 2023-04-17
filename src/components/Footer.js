@@ -5,6 +5,9 @@ export default function Footer(props) {
     <footer>
       <div className="container bordered">
             <div className="col bordered">
+              <h2>Kebab King</h2>
+            </div>
+            <div className="col bordered">
                 <ul>
                     <li><h3>Öffnungszeiten</h3></li>
                     <li>Montag - Fritag 11:00 - 21:00</li>
@@ -19,7 +22,7 @@ export default function Footer(props) {
                     <li>{props.phone}</li>
                 </ul>
             </div>
-            <div className="col bordered"></div>
+            
         </div>
     </footer>
   )

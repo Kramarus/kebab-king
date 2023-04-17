@@ -285,7 +285,21 @@ section#menu .menu-tab {
       flex-direction: column; } }
 
 section#contact {
-  background-color: #fac564; }
+  background-color: #fac564;
+  color: black; }
+  section#contact .container {
+    flex-direction: column;
+    padding: 32px 0; }
+  section#contact .img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px; }
+    section#contact .img-container img {
+      max-width: 100%;
+      max-height: 100%; }
 
 footer {
   display: flex;
@@ -294,10 +308,12 @@ footer {
   background-color: black;
   color: #f5f5f5; }
   footer .col {
-    height: 400px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     flex: 1; }
+    footer .col h2 {
+      text-align: left; }
     footer .col ul {
       margin: 16px 0;
       text-align: left; }
