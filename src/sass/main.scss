@@ -223,6 +223,7 @@ section#menu {
     width: 100%;
     z-index: 1000;
     background-color: $primary-color;
+    border-bottom: 2px solid $custom-light;
     li {
       display: inline-block;
       height: 100%;

@@ -191,7 +191,8 @@ section#menu {
     list-style-type: none;
     width: 100%;
     z-index: 1000;
-    background-color: #fac564; }
+    background-color: #fac564;
+    border-bottom: 2px solid #f5f5f5; }
     section#menu .menu-tabs li {
       display: inline-block;
       height: 100%;

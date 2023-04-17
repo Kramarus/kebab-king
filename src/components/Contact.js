@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="container">
         <h2>Kontakt</h2>
         <div className="img-container">
-        <a href="https://wa.me/4917643234283?text=Bestellen%20Sie%20bei%20uns">
+        <a href="https://wa.me/4915906746754?text=Hallo!">
           <img src={WhatsApp} alt="WhatsApp icon" />
         </a>
         </div>
