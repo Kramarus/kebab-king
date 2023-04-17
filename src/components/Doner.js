@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import donerImg from "../images/doner.png";
+
 
 import donerMenu from "../menu/doner.js";
-import lahmacunMenu from "../menu/lahmacun.js";
 
 export default function Doner() {
   return (
