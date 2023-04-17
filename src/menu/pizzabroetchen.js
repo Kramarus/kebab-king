@@ -28,7 +28,7 @@ let pizzabrotchenMenu = (
   <table>
     {pizzabrotchenList.map((item) => (
       <tr>
-        <td>
+        <td className="menu-id">
           <h3>{item.id}</h3>
         </td>
         <td>

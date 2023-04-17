@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import Doner from "./Doner";
 import MenuTab from "./MenuTab";
 
-
-
 import donerMenu from "../menu/doner.js";
 import donerImg from "../images/doner2.png";
 
@@ -40,9 +38,6 @@ import drinksImg from "../images/drinks.png";
 import saucesMenu from "../menu/sauces";
 import saucesImg from "../images/sauces.png";
 
-
-
-
 export default function Menu(props) {
   let groups = [
     "Döner",
@@ -61,43 +56,86 @@ export default function Menu(props) {
 
   const [activeTab, setActiveTab] = useState(groups[0]);
 
-  
-
   groups = groups.map((group) => (
     <li>
-      <a href={"#" + group}>
-      <button
+      <a
+        href={"#" + group}
         className={activeTab === group ? "menu-tab active" : "menu-tab"}
         key={group}
         onClick={() => setActiveTab(group)}
       >
         {group}
-      </button>
       </a>
-      
     </li>
-  ))
+  ));
 
   return (
     <section id="menu">
+        <ul class="menu-tabs">{groups}</ul>      
       <div className="container">
-        <ul class="menu-tabs">
-          {groups}
-        </ul>
         <MenuTab id="Döner" title="Döner" table={donerMenu} image={donerImg} />
-        <MenuTab id="Lahmacun" title="Lahmacun" table={lahmacunMenu} image={lahmacunImg} />
-        <MenuTab id="Schnitzel" title="Schnitzel" table={schnitzelMenu} image={schnitzelImg} />
+        <MenuTab
+          id="Lahmacun"
+          title="Lahmacun"
+          table={lahmacunMenu}
+          image={lahmacunImg}
+        />
+        <MenuTab
+          id="Schnitzel"
+          title="Schnitzel"
+          table={schnitzelMenu}
+          image={schnitzelImg}
+        />
         <MenuTab id="Pizza" title="Pizza" table={pizzaMenu} image={pizzaImg} />
-        <MenuTab id="Pizzabrötchen" title="Pizzabrötchen" table={pizzaBrotchenMenu} image={pizzaBrotchenImg} />
-        <MenuTab id="Pommes" title="Pommes" table={pommesMenu} image={pommesImg} />
-        <MenuTab id="Imbiss" title="Imbiss" table={imbissMenu} image={imbissImg} />
-        <MenuTab id="Burger" title="Burger" table={burgerMenu} image={burgerImg} />
-        <MenuTab id="Salate" title="Salate" table={salateMenu} image={saladImg} />
-        <MenuTab id="Vegetarisch" title="Vegetarisch" table={vegetarischMenu} image={vegetarischImg} />
-        <MenuTab id="Getränke" title="Getränke" table={drinksMenu} image={drinksImg} />
-        <MenuTab id="Saucen" title="Saucen" table={saucesMenu} image={saucesImg} />
+        <MenuTab
+          id="Pizzabrötchen"
+          title="Pizzabrötchen"
+          table={pizzaBrotchenMenu}
+          image={pizzaBrotchenImg}
+        />
+        <MenuTab
+          id="Pommes"
+          title="Pommes"
+          table={pommesMenu}
+          image={pommesImg}
+        />
+        <MenuTab
+          id="Imbiss"
+          title="Imbiss"
+          table={imbissMenu}
+          image={imbissImg}
+        />
+        <MenuTab
+          id="Burger"
+          title="Burger"
+          table={burgerMenu}
+          image={burgerImg}
+        />
+        <MenuTab
+          id="Salate"
+          title="Salate"
+          table={salateMenu}
+          image={saladImg}
+        />
+        <MenuTab
+          id="Vegetarisch"
+          title="Vegetarisch"
+          table={vegetarischMenu}
+          image={vegetarischImg}
+        />
+        <MenuTab
+          id="Getränke"
+          title="Getränke"
+          table={drinksMenu}
+          image={drinksImg}
+        />
+        <MenuTab
+          id="Saucen"
+          title="Saucen"
+          table={saucesMenu}
+          image={saucesImg}
+        />
       </div>
-      
     </section>
   );
 }

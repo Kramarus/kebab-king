@@ -25,10 +25,10 @@ let pommesMenu = (
       <table>
         <tr>
           <td>
-            <h4>Nummer</h4>
+
           </td>
           <td>
-            <h4>Pizza</h4>
+
           </td>
           <td>
             <h4>
@@ -43,7 +43,7 @@ let pommesMenu = (
         </tr>
         {pommesList.map((item) => (
           <tr>
-            <td>
+            <td className="menu-id">
               <h3>{item.id}</h3>
             </td>
             <td>
