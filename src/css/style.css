@@ -4,43 +4,52 @@
 .bordered2 {
   border: 1px dotted red; }
 
+#contact {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: none; }
+
 html {
   scroll-behavior: smooth; }
-  html body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-    background-color: black;
-    color: #f5f5f5;
-    max-width: 100%;
-    overflow-x: hidden; }
-    html body .container {
-      width: 1368px;
-      height: 100%;
-      margin: 0 auto;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap; }
-      @media (max-width: 1368px) {
-        html body .container {
-          width: 100%;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center; } }
-    html body button,
-    html body a {
-      text-decoration: none; }
-      html body button:hover,
-      html body a:hover {
-        cursor: pointer;
-        transition: 0.3s; }
-  html img {
-    max-height: 50vh;
-    width: fit-content; }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+  color: #f5f5f5;
+  max-width: 100%;
+  overflow-x: hidden; }
+
+.container {
+  width: 1368px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+  @media (max-width: 1368px) {
+    .container {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
+
+button, a {
+  text-decoration: none;
+  transition: 0.3s; }
+  button:hover, a:hover {
+    cursor: pointer; }
+
+img {
+  max-height: 50vh;
+  width: fit-content; }
 
 nav {
   height: 10vh;
@@ -56,26 +65,23 @@ nav {
     align-items: center; }
     @media (max-width: 526px) {
       nav .container {
-        flex-direction: column !important;
+        flex-direction: column;
         justify-content: center;
         align-items: center; } }
   nav a {
-    color: #f5f5f5; }
-    @media (max-width: 526px) {
-      nav a {
-        width: 100%; } }
-  @media (max-width: 526px) {
-    nav ul {
-      width: 100%; } }
-  nav ul li {
-    display: inline-block;
-    padding: 10px;
-    font-size: 18px;
-    height: 100%; }
-    nav ul li:hover {
-      transform: scale(1.1);
-      transition: 0.3s;
-      cursor: pointer; }
+    color: #f5f5f5;
+    width: 100%; }
+  nav ul {
+    width: 100%; }
+    nav ul li {
+      display: inline-block;
+      padding: 10px;
+      font-size: 18px;
+      height: 100%; }
+      nav ul li:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+        cursor: pointer; }
 
 section#hero {
   background-size: cover;
@@ -149,7 +155,7 @@ section#hero {
           margin-left: 10px;
           font-size: 1.2rem;
           background-color: transparent;
-          color: #f5f5f5;
+          color: black;
           border: 1px solid #f5f5f5; }
           section#hero .hero .hero-content .cta-buttons .cta-secondary:hover {
             transform: scale(1.1);
@@ -159,6 +165,8 @@ section#hero {
             color: black; }
           section#hero .hero .hero-content .cta-buttons .cta-secondary a {
             color: #f5f5f5; }
+            section#hero .hero .hero-content .cta-buttons .cta-secondary a:hover {
+              color: black; }
           @media (max-width: 400px) {
             section#hero .hero .hero-content .cta-buttons .cta-secondary {
               width: 90%;
@@ -170,15 +178,35 @@ section#hero {
         max-width: 100%;
         max-height: 100%; }
 
-section#menu, section#wochenmenu {
-  display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#wochenmenu {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 1500;
+  min-width: 90%; }
+  #wochenmenu .header {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 16px; }
+  #wochenmenu .close {
+    color: #f5f5f5;
+    font-size: 2rem; }
+    #wochenmenu .close:hover {
+      cursor: pointer; }
+  #wochenmenu .footer button {
+    color: #f5f5f5;
+    background-color: transparent;
+    border: 1px solid #f5f5f5;
+    padding: 16px; }
+
+section#menu {
+  display: block; }
+
+section#menu, #wochenmenu {
   padding-bottom: 32px;
   background-color: black;
   color: #f5f5f5; }
-  section#menu .menu-tabs, section#wochenmenu .menu-tabs {
+  section#menu .menu-tabs, #wochenmenu .menu-tabs {
     position: -webkit-sticky;
     /* Safari */
     position: sticky;
@@ -195,14 +223,14 @@ section#menu, section#wochenmenu {
     z-index: 1000;
     background-color: #fac564;
     border-bottom: 2px solid #f5f5f5; }
-    section#menu .menu-tabs li, section#wochenmenu .menu-tabs li {
+    section#menu .menu-tabs li, #wochenmenu .menu-tabs li {
       display: inline-block;
       height: 100%;
       flex: 1; }
-      section#menu .menu-tabs li:hover, section#wochenmenu .menu-tabs li:hover {
+      section#menu .menu-tabs li:hover, #wochenmenu .menu-tabs li:hover {
         cursor: pointer;
         background-color: black; }
-      section#menu .menu-tabs li a, section#wochenmenu .menu-tabs li a {
+      section#menu .menu-tabs li a, #wochenmenu .menu-tabs li a {
         background-color: transparent;
         border: none;
         color: black;
@@ -212,46 +240,46 @@ section#menu, section#wochenmenu {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-        section#menu .menu-tabs li a:hover, section#wochenmenu .menu-tabs li a:hover {
+        section#menu .menu-tabs li a:hover, #wochenmenu .menu-tabs li a:hover {
           cursor: pointer;
           color: #f5f5f5;
           transition: 0.3s; }
         @media (max-width: 520px) {
-          section#menu .menu-tabs li a, section#wochenmenu .menu-tabs li a {
+          section#menu .menu-tabs li a, #wochenmenu .menu-tabs li a {
             font-size: 1rem; } }
         @media (max-width: 450px) {
-          section#menu .menu-tabs li a, section#wochenmenu .menu-tabs li a {
+          section#menu .menu-tabs li a, #wochenmenu .menu-tabs li a {
             font-size: 0.8rem; } }
-      section#menu .menu-tabs li .active, section#wochenmenu .menu-tabs li .active {
+      section#menu .menu-tabs li .active, #wochenmenu .menu-tabs li .active {
         background-color: black;
         color: #f5f5f5; }
-  section#menu .menu-table, section#wochenmenu .menu-table {
+  section#menu .menu-table, #wochenmenu .menu-table {
     margin: 0;
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    section#menu .menu-table table, section#wochenmenu .menu-table table {
+    section#menu .menu-table table, #wochenmenu .menu-table table {
       width: 100%;
       margin: 16px 0;
       padding: 4px; }
-      section#menu .menu-table table .menu-id, section#wochenmenu .menu-table table .menu-id {
+      section#menu .menu-table table .menu-id, #wochenmenu .menu-table table .menu-id {
         text-align: center; }
-      section#menu .menu-table table tr td, section#wochenmenu .menu-table table tr td {
+      section#menu .menu-table table tr td, #wochenmenu .menu-table table tr td {
         padding: 8px;
         text-align: left;
         border-bottom: 1px solid #f5f5f5 !important; }
-        section#menu .menu-table table tr td h3, section#wochenmenu .menu-table table tr td h3 {
+        section#menu .menu-table table tr td h3, #wochenmenu .menu-table table tr td h3 {
           margin: 0;
           padding: 0;
           font-size: 1.5rem; }
-        section#menu .menu-table table tr td p, section#wochenmenu .menu-table table tr td p {
+        section#menu .menu-table table tr td p, #wochenmenu .menu-table table tr td p {
           margin: 0;
           padding: 0;
           font-size: 1.2rem;
           color: grey; }
-  section#menu .menu, section#wochenmenu .menu {
+  section#menu .menu, #wochenmenu .menu {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -259,23 +287,23 @@ section#menu, section#wochenmenu {
     align-items: center;
     width: 100%;
     overflow: hidden; }
-    section#menu .menu h2, section#wochenmenu .menu h2 {
+    section#menu .menu h2, #wochenmenu .menu h2 {
       width: 100%;
       padding: 32px 0; }
-    section#menu .menu .menu-tab, section#wochenmenu .menu .menu-tab {
+    section#menu .menu .menu-tab, #wochenmenu .menu .menu-tab {
       border-radius: 8px;
       padding: 8px 16px;
       margin: 0;
       padding: 0;
       width: 100%;
       font-size: 1rem; }
-      section#menu .menu .menu-tab .menu-img, section#wochenmenu .menu .menu-tab .menu-img {
+      section#menu .menu .menu-tab .menu-img, #wochenmenu .menu .menu-tab .menu-img {
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center; }
-        section#menu .menu .menu-tab .menu-img img, section#wochenmenu .menu .menu-tab .menu-img img {
+        section#menu .menu .menu-tab .menu-img img, #wochenmenu .menu .menu-tab .menu-img img {
           max-width: 100%;
           max-height: 100%; }
 
@@ -288,21 +316,44 @@ section#menu .menu-tab {
       flex-direction: column; } }
 
 section#contact {
-  background-color: #fac564;
-  color: black; }
+  color: black;
+  bottom: 0;
+  left: 0; }
   section#contact .container {
-    flex-direction: column;
+    flex-direction: row-reverse;
     padding: 32px 0; }
-  section#contact .img-container {
+    @media (max-width: 1368px) {
+      section#contact .container {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center; } }
+  section#contact .contact-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
+    color: #f5f5f5;
+    font-size: 2rem; }
+    section#contact .contact-box .message {
+      background-color: #29a71a;
+      padding: 8px 4px; }
+  section#contact .img-container {
     height: 100px;
-    width: 100px; }
+    width: 100px;
+    margin-left: 16px;
+    margin-right: 32px;
+    z-index: 2000; }
     section#contact .img-container img {
       max-width: 100%;
       max-height: 100%; }
+
+#map {
+  padding-top: 32px;
+  padding-bottom: 32px; }
+  #map iframe {
+    width: 100%;
+    height: 50vh; }
 
 footer {
   display: flex;

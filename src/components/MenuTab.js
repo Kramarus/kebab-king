@@ -8,8 +8,7 @@ export default function MenuTab(props) {
 
   return (
     <div className="menu" id={props.id}>
-      <h2 style={style}>{props.title}</h2>
-
+      <h2 onClick={props.addToCard} style={style}>{props.title}</h2>
       <div className="menu-tab">
         <div className="menu-img">
           <img src={props.image} alt="" />

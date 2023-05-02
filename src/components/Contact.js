@@ -1,15 +1,19 @@
 import React from "react";
 import WhatsApp from "../images/whatsapp.png";
 
-export default function Contact() {
+const whatsAppLink = `https://wa.me/4915906746754?text=Hallo!`;
+
+export default function Contact(props) {
   return (
     <section id="contact">
       <div className="container">
-        <h2>Kontakt</h2>
-        <div className="img-container">
-        <a href="https://wa.me/4915906746754?text=Hallo!">
-          <img src={WhatsApp} alt="WhatsApp icon" />
-        </a>
+        <div className="contact-box">
+          {/* <div className="message">{props.message}</div> */}
+          <div className="img-container">
+            <a href={props.link}>
+              <img src={WhatsApp} alt="WhatsApp icon" />
+            </a>
+          </div>
         </div>
       </div>
     </section>

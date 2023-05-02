@@ -1,51 +1,58 @@
 @import "./dev.scss";
 @import "./mixins.scss";
 @import "./variables.scss";
+@import "./contact-btn.scss";
 
 //Global
 html {
   scroll-behavior: smooth;
-  body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", sans-serif;
-    background-color: $custom-dark;
-    color: $custom-light;
-    max-width: 100%;
-    overflow-x: hidden;
-    .container {
-      width: 1368px;
-      height: 100%;
-      margin: 0 auto;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      // overflow: hidden;
-      @include screen-max(1368px) {
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    button,
-    a {
-      text-decoration: none;
-      &:hover {
-        cursor: pointer;
-        // transform: scale(1.1);
-        transition: 0.3s;
-      }
-    }
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: $custom-dark;
+  color: $custom-light;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1368px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  // overflow: hidden;
+  
+  @include screen-max(1368px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  img {
-    max-height: 50vh;
-    width: fit-content;
+}
+
+button, a {
+  text-decoration: none;
+  transition: 0.3s;
+  
+  &:hover {
+    cursor: pointer;
+    // transform: scale(1.1);
+    // Commented out since it's not necessary and can cause layout shifts.
   }
+}
+
+img {
+  max-height: 50vh;
+  width: fit-content;
 }
 
 //Navigation
@@ -56,32 +63,34 @@ nav {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  
   .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
     @include screen-max(526px) {
-      flex-direction: column!important;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
     }
   }
+  
   a {
     color: $custom-light;
-    @include screen-max(526px) {
-      width: 100%;
-    }
+    width: 100%; // Moved from @include screen-max(526px) since it's always necessary.
   }
+  
   ul {
-    @include screen-max(526px) {
-      width: 100%;
-    }
+    width: 100%; // Moved from li since it's always necessary.
+    
     li {
       display: inline-block;
       padding: 10px;
       font-size: 18px;
       height: 100%;
+      
       &:hover {
         transform: scale(1.1);
         transition: 0.3s;
@@ -172,7 +181,7 @@ section#hero {
           margin-left: 10px;
           font-size: 1.2rem;
           background-color: transparent;
-          color: $custom-light;
+          color: $custom-dark;
           border: 1px solid $custom-light;
           &:hover {
             transform: scale(1.1);
@@ -183,6 +192,9 @@ section#hero {
           }
           a {
             color: $custom-light;
+            &:hover {
+              color: $custom-dark;
+            }
           }
           @include screen-max(400px) {
             width: 90%;
@@ -202,12 +214,40 @@ section#hero {
   }
 }
 
-// Menu
-section#menu, section#wochenmenu {
+#wochenmenu {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 1500;
+  min-width: 90%;
+  .header {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 16px;
+  }
+    .close {
+      color: $custom-light;
+      font-size: 2rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .footer {
+      button {
+        color: $custom-light;
+        background-color: transparent;
+        border: 1px solid $custom-light;
+        padding: 16px;
+      }
+    }
+  
+}
+
+section#menu{
   display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+// Menu
+section#menu, #wochenmenu {
   padding-bottom: 32px;
   background-color: $custom-dark;
   color: $custom-light;
@@ -349,23 +389,52 @@ section#menu {
 
 //Contact
 section#contact {
-  background-color: $primary-color;
   color: $custom-dark;
+  bottom: 0;
+  left: 0;
+
   .container {
-    flex-direction: column;
+    flex-direction: row-reverse;
     padding: 32px 0;
+    @include screen-max(1368px) {
+      width: 100%;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  .contact-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: $custom-light;
+    font-size: 2rem;
+    .message {
+      background-color: #29a71a;
+      padding: 8px 4px;
+    }
   }
   .img-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100px;
     width: 100px;
+    margin-left: 16px;
+    margin-right: 32px;
+    z-index: 2000;
     img {
       max-width: 100%;
       max-height: 100%;
     }
+  }
+}
+
+#map {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  iframe {
+    width: 100%;
+    height: 50vh;
   }
 }
 

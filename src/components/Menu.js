@@ -73,7 +73,7 @@ export default function Menu(props) {
     <section id="menu">
         <ul class="menu-tabs">{groups}</ul>      
       <div className="container">
-        <MenuTab id="Döner" title="Döner" table={donerMenu} image={donerImg} />
+        <MenuTab addToCard={props.addToCard} id="Döner" title="Döner" table={donerMenu} image={donerImg} />
         <MenuTab
           id="Lahmacun"
           title="Lahmacun"
