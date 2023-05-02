@@ -75,7 +75,7 @@ export default function Hero(props) {
             <h2>{props.subtitle}</h2>
             <div className="cta-buttons">
               <button className="cta-primary">
-                <a onClick={handleClick}>Wochenangebot</a>
+                <a onClick={handleClick}>Tagesangebot</a>
               </button>
               <button className="cta-secondary">
                 <a href="#menu">Menü ansehen</a>
