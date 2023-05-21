@@ -41,6 +41,19 @@ export default function Hero(props) {
     document.getElementById("wochenmenu").style.display = "none";
   }
 
+  //Write a function which closes #wochenmenu by clicking outside of it
+  
+  window.onclick = function(event) {
+    if (document.getElementById("wochenmenu").style.display != "none"){
+      if ((event.target == document.getElementById("root")) && (event.target != document.getElementById("wochenmenu"))) {
+        document.getElementById("wochenmenu").style.display = "none";
+      }
+    }
+      
+  }
+
+ 
+
   const tagesMenu = (item) => {
     return (
       <>
@@ -55,7 +68,7 @@ export default function Hero(props) {
                 </div>
               </td>
               <td>
-                <h3>{item.price ? item.price.toFixed(2) + "€" : null}</h3>
+                <h3 className="menu-price">{item.price ? item.price.toFixed(2) + "€" : null}</h3>
               </td>
             </tr>
           ))}
