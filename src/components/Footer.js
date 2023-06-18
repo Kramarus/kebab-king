@@ -11,7 +11,8 @@ export default function Footer(props) {
                 <ul>
                     <li><h3>Öffnungszeiten</h3></li>
                     <li>Montag - Fritag 11:00 - 21:00</li>
-                    <li>Samstag, Sonntag 12:00 - 21:00</li>
+                    <li>Sonntag 12:00 - 21:00</li>
+                    <li>Samstag geschlossen</li>
                 </ul>
             </div>
             <div className="col">
